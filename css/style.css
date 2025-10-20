@@ -1,0 +1,314 @@
+/* DT200G - Grafisk teknik för webb
+ * Project
+ * Linn Eriksson, HT25
+ */
+
+/*Import fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Flamenco:wght@300;400&family=Kalam:wght@300;400;700&display=swap');
+
+html {
+    /*62.5% of 16px => 10px*/
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../images/background4.png");
+    background-color: #d4af37;
+}
+
+#wrapper {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+/*Headers*/
+h1 {
+    font-size: 3.2em;
+    font-weight: bold;
+    font-family: Kalam, Arial, Helvetica, sans-serif;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+h2 {
+    font-size: 2.4em;
+    font-weight: bold;
+    font-family: Kalam, Arial, Helvetica, sans-serif;
+    padding: 2%;
+    margin: 2%;
+    border-bottom: #d4af37 2px solid;
+}
+
+h3 {
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: Kalam, Arial, Helvetica, sans-serif;
+}
+
+/*Text in paragraphs and lists*/
+p,
+ul {
+    font-size: 1.6em;
+    font-family: Flamenco, Georgia, serif;
+    line-height: 1.6;
+    padding: 2%;
+    margin: 2%;
+
+    &.center {
+        text-align: center;
+    }
+
+    &.right {
+        text-align: right;
+    }
+
+    &.price {
+        font-style: italic;
+    }
+
+    & a {
+        color: #695616;
+    }
+
+    & a:visited {
+        color:#000;
+    }
+}
+
+/*images and video*/
+img {
+    max-width: 100%;
+}
+
+video {
+    display: block;
+    margin: auto;
+}
+
+/*Social media icons*/
+.fa {
+    text-decoration: none;
+    color: #000;
+}
+
+/*Skiplink is hidden on mobile*/
+.skiplink {
+    display: none;
+}
+
+/*Navigation*/
+nav {
+    padding: 2%;
+    width: 95%;
+
+    & ul {
+        padding: 0;
+    }
+
+    & li {
+        list-style: none;
+
+
+    }
+
+
+    & a {
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
+        display: block;
+        padding: 12px;
+        background-color: #d4af37;
+        margin: 4px;
+        border: 2px solid #695616;
+        border-radius: 10px;
+        text-align: center;
+
+        &:visited {
+            color: #000;
+        }
+
+        &:hover,
+        &:active {
+            background-color: #695616;
+            color: #fff;
+        }
+    }
+
+    & a.current {
+        border: 2px dashed #695616;
+    }
+
+}
+
+/*General design*/
+header {
+    border-bottom: 2px solid #695616;
+}
+
+article {
+    border: 1px solid #695616;
+    border-radius: 10px;
+    margin: 2%;
+
+    & h2 {
+        text-align: center;
+    }
+
+    & picture {
+        display: block;
+        margin: 0 17%;
+    }
+}
+
+footer {
+    border-top: 2px solid #695616;
+}
+
+/*Image gallery-thing for products*/
+#products {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+
+    a {
+        text-decoration: none;
+        color: #000;
+
+        .slideshowitem {
+            display: none;
+            animation-name: fade;
+            animation-duration: 2s;
+
+            @keyframes fade {
+                from {
+                    opacity: .5
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+
+    .previous,
+    .next {
+        position: absolute;
+        top: 40%;
+        width: auto;
+        margin: 5px;
+        padding: 20px;
+        transition: 0.6s ease;
+        color: #695616;
+
+        &:hover {
+            background-color: #695616;
+            color: #fff;
+        }
+    }
+
+    .next {
+        right: 0;
+    }
+
+    .previous {
+        left: 0;
+    }
+
+    .slideshowdot {
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        color: #695616;
+        margin: 5px;
+        padding: 10px;
+        height: 20px;
+        width: 20px;
+        line-height: 105%;
+
+        &.active,
+        &:hover {
+            background-color: #695616;
+            color: #fff;
+        }
+    }
+
+    .center {
+        text-align: center;
+    }
+}
+
+/*Design for non-mobile-screen (aka over 450px width)*/
+@media only screen and (min-width: 450px) {
+
+    /*General design*/
+    #wrapper {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    /*Remove padding to not create as much dead white space*/
+    h2 {
+        padding: 0;
+    }
+
+    /*Shorter paragrafs to increase readability*/
+    p {
+        max-width: 650px;
+        padding: 0;
+
+        &.center,
+        &.right {
+            max-width: 100%;
+            padding: 2%;
+        }
+    }
+
+    /*Navigationlist on larger screens*/
+    nav {
+        & a {
+            float: left;
+        }
+
+        &::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    }
+
+    /*Skiplink now exists*/
+    .skiplink {
+        display: inline;
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        position: fixed;
+        left: 10px;
+        top: 10px;
+
+        &:focus {
+            width: auto;
+            height: auto;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            padding: 12px;
+            background-color: #695616;
+            margin: 4px;
+            border: 2px solid #695616;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px 0 0 10px;
+            z-index: 99;
+        }
+    }
+}
