@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico">
+    <title>Kattmat AB - Projekt för DT200G</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <a href="#maincontent" class="skiplink button">Gå till huvudinnehåll</a>
+            <a href="index.html">
+                <h1 class="hidden">Kattmat AB</h1>
+                <picture>
+                    <source media="(min-width: 450px)" srcset="images/header.svg">
+                    <img src="images/headersmall.png" alt="Kattmat AB">
+                </picture>
+            </a>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="allproducts.html" class="current">Produkter</a></li>
+                <li><a href="about.html">Om oss</a></li>
+            </ul>
+        </nav>
+        <main id="maincontent">
+            <p>Klicka på en produkt i bildspelet nedan för att komma till produktens egen sida med mer information.</p>
+            <div id="products">
+                <a href="product1.html" class="slideshowitem">
+                <article>
+                    <h2>Cat Stick</h2>
+                    <picture>
+                        <source media="(min-width:600px)" srcset="images/catstick.webp" type="image/webp">
+                        <source media="(max-width:599px)" srcset="images/catstick_small.webp" type="image/webp">
+                        <source media="(min-width:600px)" srcset="images/catstick.png" type="image/png">
+                        <source media="(max-width:599px)" srcset="images/catstick_small.png" type="image/png">
+                        <img src="images/catstick_small.png" alt="Cat Stick, rosa förpackning med kattgodis med smak av kalkon och lamm.">
+                    </picture>
+                    <p>Cat Stick är ett uppskattat godis som faller dom flesta katter i smaken.</p>
+                    <p class="price">Pris: 10 kronor</p>
+                </article>
+                </a>
+                <a href="product2.html" class="slideshowitem">
+                    <article>
+                        <h2>Fem pack mousse</h2>
+                        <picture>
+                            <source media="(min-width:600px)" srcset="images/fempack.webp" type="image/webp">
+                            <source media="(max-width:599px)" srcset="images/fempack_small.webp" type="image/webp">
+                            <source media="(min-width:600px)" srcset="images/fempack.png" type="image/png">
+                            <source media="(max-width:599px)" srcset="images/fempack_small.png" type="image/png">
+                            <img src="images/fempack_small.png" alt="Fem små konservburkar med kattmat i blandade smaker. Bilden visar nöt och lax.">
+                        </picture>
+                        <p>Fem pack av vår populära mat i krämig mousse-konsistens.</p>
+                        <p class="price">Pris: 50 kronor</p>
+                    </article>
+                </a>
+                <a href="product3.html" class="slideshowitem">
+                    <article>
+                        <h2>Mousse i singelpack</h2>
+                        <picture>
+                            <source media="(min-width:600px)" srcset="images/mousselamm.webp" type="image/webp">
+                            <source media="(max-width:599px)" srcset="images/mousselamm_small.webp" type="image/webp">
+                            <source media="(min-width:600px)" srcset="images/mousselamm.png" type="image/png">
+                            <source media="(max-width:599px)" srcset="images/mousselamm_small.png" type="image/png">
+                            <img src="images/mousselamm_small.png" alt="En förpackning kattmat med lammsmak.">
+                        </picture>
+                        <p>Vår populära och krämiga mousse-mat i singelpack.</p>
+                        <p class="price">Pris: 12 kronor</p>
+                    </article>
+                </a>
+                <a href="product4.html" class="slideshowitem">
+                    <article>
+                        <h2>Torrfoder</h2>
+                        <picture>
+                            <source media="(min-width:600px)" srcset="images/torrfoder.webp" type="image/webp">
+                            <source media="(max-width:599px)" srcset="images/torrfoder_small.webp" type="image/webp">
+                            <source media="(min-width:600px)" srcset="images/torrfoder.png" type="image/png">
+                            <source media="(max-width:599px)" srcset="images/torrfoder_small.png" type="image/png">
+                            <img src="images/torrfoder_small.png" alt="En påse med torrfoder för katter.">
+                        </picture>
+                        <p>1.75 kilo av vårt mycket populära torrfoder.</p>
+                        <p class="price">Pris: 75 kronor</p>
+                    </article>
+                </a>
+
+            
+            
+                <div class="center slideshowicons">
+                <a class="previous fa-solid fa-circle-left fa-2xl slideshowicons" onclick="plusSlides(-1)"></a>
+                <a class="next fa-solid fa-circle-right fa-2xl slideshowicons" onclick="plusSlides(1)"></a>
+                    <span class="fa-solid fa-splotch fa-2xl slideshowicons slideshowdot" onclick="currentSlide(1)"></span>
+                    <span class="fa-solid fa-splotch fa-2xl slideshowicons slideshowdot" onclick="currentSlide(2)"></span>
+                    <span class="fa-solid fa-splotch fa-2xl slideshowicons slideshowdot" onclick="currentSlide(3)"></span>
+                    <span class="fa-solid fa-splotch fa-2xl slideshowicons slideshowdot" onclick="currentSlide(4)"></span>
+                </div>
+            
+            </div>
+
+        </main>
+        <footer>
+            <p class="right">
+                <a href="#" class="fa fa-brands fa-square-bluesky fa-2xl"></a> 
+                <a href="#" class="fa fa-brands fa-square-snapchat fa-2xl"></a> 
+                <a href="#" class="fa fa-brands fa-square-youtube fa-2xl"></a>
+                <a href="#" class="fa fa-brands fa-square-whatsapp fa-2xl"></a> 
+                <a href="#" class="fa fa-brands fa-square-facebook fa-2xl"></a> 
+                <a href="#" class="fa fa-brands fa-square-instagram fa-2xl"></a> 
+            </p>
+            <p class="center">Kattmat AB är ett företag som sätter din katt i fokus.</p>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/93fa4faf54.js" crossorigin="anonymous"></script>
+</body>
+</html>
