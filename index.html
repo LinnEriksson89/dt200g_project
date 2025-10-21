@@ -32,13 +32,82 @@
             <article>
                 <h2>Välkommen!</h2>
                 <p>Välkommen till Katmat AB! Vi är ett familjeägt företag som brinner för att leverera den bästa och
-                    godaste maten till er katt! Under fliken "Produkter" hittar du våra olika mumsiga produkter och
-                    under fliken "Om oss" kan du läsa mer om företaget.</p>
+                    godaste maten till er katt! Under fliken "Produkter", eller i bildspelet nedan, hittar du våra olika
+                    mumsiga produkter och under fliken "Om oss" kan du läsa mer om företaget.
+                </p>
+                <p>Klicka på en produkt i bildspelet nedan för att komma till produktens egen sida med mer information.</p>
+                <div id="products">
+                    <a href="product1.html" class="slideshowitem">
+                        <article>
+                            <h3>Cat Stick</h3>
+                            <picture>
+                                <source media="(min-width:600px)" srcset="images/catstick.webp" type="image/webp">
+                                <source media="(max-width:599px)" srcset="images/catstick_small.webp" type="image/webp">
+                                <source media="(min-width:600px)" srcset="images/catstick.png" type="image/png">
+                                <source media="(max-width:599px)" srcset="images/catstick_small.png" type="image/png">
+                                <img src="images/catstick_small.png"
+                                    alt="Cat Stick, rosa förpackning med kattgodis med smak av kalkon och lamm.">
+                            </picture>
+                        </article>
+                    </a>
+                    <a href="product2.html" class="slideshowitem">
+                        <article>
+                            <h3>Fem pack mousse</h3>
+                            <picture>
+                                <source media="(min-width:600px)" srcset="images/fempack.webp" type="image/webp">
+                                <source media="(max-width:599px)" srcset="images/fempack_small.webp" type="image/webp">
+                                <source media="(min-width:600px)" srcset="images/fempack.png" type="image/png">
+                                <source media="(max-width:599px)" srcset="images/fempack_small.png" type="image/png">
+                                <img src="images/fempack_small.png"
+                                    alt="Fem små konservburkar med kattmat i blandade smaker. Bilden visar nöt och lax.">
+                            </picture>
+                        </article>
+                    </a>
+                    <a href="product3.html" class="slideshowitem">
+                        <article>
+                            <h3>Mousse i singelpack</h3>
+                            <picture>
+                                <source media="(min-width:600px)" srcset="images/mousselamm.webp" type="image/webp">
+                                <source media="(max-width:599px)" srcset="images/mousselamm_small.webp"
+                                    type="image/webp">
+                                <source media="(min-width:600px)" srcset="images/mousselamm.png" type="image/png">
+                                <source media="(max-width:599px)" srcset="images/mousselamm_small.png" type="image/png">
+                                <img src="images/mousselamm_small.png" alt="En förpackning kattmat med lammsmak.">
+                            </picture>
+                        </article>
+                    </a>
+                    <a href="product4.html" class="slideshowitem">
+                        <article>
+                            <h3>Torrfoder</h3>
+                            <picture>
+                                <source media="(min-width:600px)" srcset="images/torrfoder.webp" type="image/webp">
+                                <source media="(max-width:599px)" srcset="images/torrfoder_small.webp"
+                                    type="image/webp">
+                                <source media="(min-width:600px)" srcset="images/torrfoder.png" type="image/png">
+                                <source media="(max-width:599px)" srcset="images/torrfoder_small.png" type="image/png">
+                                <img src="images/torrfoder_small.png" alt="En påse med torrfoder för katter.">
+                            </picture>
+                        </article>
+                    </a>
+
+                    <div class="center slideshowicons">
+                        <a class="previous fa-solid fa-circle-left fa-2xl slideshowicons" onclick="plusSlides(-1)"></a>
+                        <a class="next fa-solid fa-circle-right fa-2xl slideshowicons" onclick="plusSlides(1)"></a>
+                        <span class="fa-solid fa-splotch fa-2xl slideshowicons slideshowdot"
+                            onclick="currentSlide(1)"></span>
+                        <span class="fa-solid fa-splotch fa-2xl slideshowicons slideshowdot"
+                            onclick="currentSlide(2)"></span>
+                        <span class="fa-solid fa-splotch fa-2xl slideshowicons slideshowdot"
+                            onclick="currentSlide(3)"></span>
+                        <span class="fa-solid fa-splotch fa-2xl slideshowicons slideshowdot"
+                            onclick="currentSlide(4)"></span>
+                    </div>
+
+                </div>
             </article>
         </main>
         <footer>
             <picture class="left">
-                <source srcset="images/logo.svg" type="image/svg">
                 <img src="images/logo_small.png" alt="Logotyp">
             </picture>
             <p class="right">
